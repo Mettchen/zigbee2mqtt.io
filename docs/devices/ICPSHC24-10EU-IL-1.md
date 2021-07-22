@@ -21,6 +21,17 @@ description: "Integrate your IKEA ICPSHC24-10EU-IL-1 via Zigbee2MQTT with whatev
 ### Pairing
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
+In certain cases the pairing does not work, the steps to rectify are:
+1) Unplug the driver
+2) Disable allowing new devices to join in zigbee2mqtt
+3) Plug in the driver, wait about 2 seconds
+4) Allow new devices to join in zigbee2mqtt
+5) Wait until the 'interviewing xxxxxx' record shows up.
+6) short-press the button on the driver. Holding it will make the driver flash the lights, but this is NOT what you want. Simply press once short
+
+If step 5 5 never shows up, you might need to briefly unplug the driver and plug it back in quickly
+
+The important note here is that the driver must be plugged in briefly (1-2 seconds) before zigbee2mqtt starts interviewing.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
